@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Almehdi Online Quran Academy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/Logo.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900' %}"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex justify-content-between">
+
+      <div class="logo">
+        <img src="{% static 'assets/img/Logo.png' %}" height="50px" width="50px">
+        <h1><a href="index.html"><span>Almehdi</span> Quran Center</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+
+          <li><a class="nav-link scrollto" href="#Enroll-form-setting">Enroll Now</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <ol id="hero-carousel-indicators" class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active"
+            style="background-image: url({{slider.0.slider_img}})">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">{{slider.0.title}}</h2>
+                <p class="animate__animated animate__fadeInUp">{{slider.0.tag_line}}</p>
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+              </div>
+            </div>
+          </div>
+          
+          {% for slider in slider|slice:"1:4" %}
+          <div class="carousel-item" style="background-image: url({{slider.slider_img}})">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">{{slider.title}}</h2>
+                <p class="animate__animated animate__fadeInUp">{{slider.tag_line}}</p>
+                <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+         
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <div id="about" class="about-area area-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline text-center">
+              <h2>About Us</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- single-well start-->
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="well-left">
+              <div class="single-well">
+                <a href="#">
+                  <img src="{% static 'assets/img/about/1.png' %}" height="500px" width="500px" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- single-well end-->
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="well-middle">
+              <div class="single-well">
+                <a href="#">
+                  <h4 class="sec-head">project Maintenance</h4>
+                </a>
+                <p>
+                  Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure aspernatur sit
+                  adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas
+                  officiis iure
+                </p>
+                <ul>
+                  <li>
+                    <i class="bi bi-check"></i> Interior design Package
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Building House
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Reparing of Residentail Roof
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Renovaion of Commercial Office
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Make Quality Products
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- End col-->
+        </div>
+      </div>
+    </div><!-- End About Section -->
+
+    <div id="Enroll-form-setting">
+
+      <form name="Form" method="POST">{% csrf_token %}
+        <h2>Enroll Now</h2>
+        <div class="box">
+          <label>Full Name</label>
+          <input type="text" name="name" id="name">
+          <div class="error" id="nameErr"></div>
+        </div>
+        <div class="box">
+          <label>Email Address</label>
+          <input type="email" name="email" id="email">
+          <div class="error" id="emailErr"></div>
+        </div>
+        <div class="box">
+          <label>Mobile Number</label>
+          <input type="tel" name="phone" maxlength="15" id="mobile">
+          <div class="error" id="mobileErr"></div>
+        </div>
+        <div class="box">
+          <label>Country</label>
+          <select name="country" id="country">
+            <option>Select</option>
+            <option>Pakistan</option>
+            <option>London</option>
+            <option>India</option>
+            <option>America</option>
+          </select>
+          <div class="error" id="countryErr"></div>
+        </div>
+        <div class="box">
+          <label>Gender</label>
+          <div class="form-inline" id="gender">
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+          </div>
+          <div class="error" id="genderErr"></div>
+        </div>
+
+        <div class="box">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+
+    </div>
+
+    <!-- ======= Team Section ======= -->
+    <div id="team" class="our-team-area area-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline text-center">
+              <h2>Our special Team</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          {% for member in team|slice:"0:4" %}
+          <div class="col-md-3 col-sm-3 col-xs-12">
+            <div class="single-team-member">
+              <div class="team-img">
+                <a href="#">
+                  <img src="{{member.t_img}}" alt="">
+                </a>
+                <div class="team-social-icon text-center">
+                  <ul>
+                    <li>
+                      <a href="https://www.facebook.com/{{member.t_fb_username}}">
+                        <i class="bi bi-facebook"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.twitter.com/{{member.t_twitter_username}}">
+                        <i class="bi bi-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/{{member.t_insta_username}}">
+                        <i class="bi bi-instagram"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="team-content text-center">
+                <h4>{{member.t_name}}</h4>
+                <p>{{member.t_role}}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          <!-- End column -->
+          
+         
+        </div>
+      </div>
+    </div><!-- End Team Section -->
+
+
+
+    <!-- ======= Pricing Section ======= -->
+    <div id="pricing" class="pricing-area area-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="section-headline text-center">
+              <h2>Pricing Table</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="pri_table_list">
+              <h3>3 Days/Week <br /> <span>$30 / month</span></h3>
+              <ol>
+                <li class="check"><i class="bi bi-check"></i><span>Online system</span></li>
+                <li class="check"><i class="bi bi-check"></i><span>3 days Free Trial</span></li>
+                <li class="check"><i class="bi bi-check"></i><span>20 Days In Month</span></li>
+                <li class="check"><i class="bi bi-check"></i><span>Class Duration 30 Minutes</span></li>
+                <li class="check"><i class="bi bi-check"></i><span>24/7 Support</span></li>
+
+
+              </ol>
+              <button>Enroll Now</button>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="pri_table_list active">
+              <span class="saleon">top sale</span>
+              <h3>5 Days/Week <br /> <span>$60 / month</span></h3>
+              <ol>
+                <li class="check"><i class="bi bi-check"></i><span>Online system</span></li>
+                <li class="check"><i class="bi bi-check"></i><span>3 days Free Trial</span></li>
+                <li class="check"><i class="bi bi-check"></i><span>20 Days In Month</span></li>
+                <li class="check"><i class="bi bi-check"></i><span>Class Duration 30 Minutes</span></li>
+                <li class="check"><i class="bi bi-check"></i><span>24/7 Support</span></li>
+              </ol>
+              <button>Enroll Now</button>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="pri_table_list">
+              <h3>2 Days/Weekend <br /> <span>$30 / month</span></h3>
+              <ol>
+                <li class="check"><i class="bi bi-check"></i><span>Online system</span></li>
+                <li class="check"><i class="bi bi-check"></i><span>1 day Free Trial</span></li>
+                <li class="check"><i class="bi bi-check"></i><span>8 Days In Month</span></li>
+                <li class="check"><i class="bi bi-check"></i><span>Class Duration 30 Minutes</span></li>
+                <li class="check"><i class="bi bi-check"></i><span>24/7 Support</span></li>
+              </ol>
+              <button>Enroll Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Pricing Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <div id="testimonials" class="testimonials">
+      <div class="container">
+
+        <div class="testimonials-slider swiper">
+          <div class="swiper-wrapper">
+
+            {% for tesmonials in tesmonial %}
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="{{tesmonials.slider_img}}" class="testimonial-img" alt="">
+                <h3>{{tesmonials.name}}</h3>
+                <h4>{{tesmonials.role}}</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  {{tesmonials.msg}}
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+            {% endfor %}
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </div><!-- End Testimonials Section -->
+
+
+    <!-- ======= Suscribe Section ======= -->
+    <div class="suscribe-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs=12">
+            <div class="suscribe-text text-center">
+              <h3>Welcome to our Almehdi Online Quran Academy company</h3>
+              <a class="sus-btn" href="#">Get A quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Suscribe Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <div id="contact" class="contact-area">
+      <div class="contact-inner area-padding">
+        <div class="contact-overly"></div>
+        <div class="container ">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-headline text-center">
+                <h2>Contact us</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Start contact icon column -->
+            <div class="col-md-4">
+              <div class="contact-icon text-center">
+                <div class="single-icon">
+                  <i class="bi bi-phone"></i>
+                  <p>
+                    Call: +92306 4112572<br>
+                    <span>Monday-Friday (9am-5pm)</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Start contact icon column -->
+            <div class="col-md-4">
+              <div class="contact-icon text-center">
+                <div class="single-icon">
+                  <i class="bi bi-envelope"></i>
+                  <p>
+                    Email: jmaratibali2@gmail.com<br>
+                    <span>Web: almehdi online quran academy.com</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Start contact icon column -->
+            <div class="col-md-4">
+              <div class="contact-icon text-center">
+                <div class="single-icon">
+                  <i class="bi bi-geo-alt"></i>
+                  <p>
+                    Location: Lahore, Punjab<br>
+                    <span>Pakistan</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+
+            <!-- Start Google Map -->
+            <div class="col-md-6">
+              <!-- Start Map -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14143117.941545919!2d60.323371148826894!3d30.068124090484666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38db52d2f8fd751f%3A0x46b7a1f7e614925c!2sPakistan!5e0!3m2!1sen!2s!4v1640877168432!5m2!1sen!2s"
+                width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+              <!-- End Map -->
+            </div>
+            <!-- End Google Map -->
+
+            <!-- Start  contact -->
+            <div class="col-md-6">
+              <div class="form contact-form">
+                <form action="/contact" method="POST">{% csrf_token %}
+                  <div class="form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                  </div>
+                  <div class="text-center"><button type="submit" class="btn bg-danger mt-2 text-white">Send Message</button></div>
+                </form>
+              </div>
+            </div>
+            <!-- End Left contact -->
+          </div>
+        </div>
+      </div>
+    </div><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="footer-content">
+              <div class="footer-head">
+                <div class="footer-logo">
+                  <h2><span>Almehdi</span> Online Quran Academy</h2>
+                </div>
+
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                  totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                <div class="footer-icons">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-instagram"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="bi bi-linkedin"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end single footer -->
+          <div class="col-md-4">
+            <div class="footer-content">
+              <div class="footer-head">
+                <h4>information</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                </p>
+                <div class="footer-contacts">
+                  <p><span>Tel:</span> +92306 8111802</p>
+                  <p><span>Email:</span> jmaratibali2@gmail.com</p>
+                  <p><span>Working Hours:</span> 12pm-7am</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end single footer -->
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-area-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="copyright text-center">
+              <p>
+                <strong>Almehdi Online Quran Academy</strong>. All Rights Reserved
+              </p>
+            </div>
+            <div class="credits">
+
+
+              Developed by <a href="https://www.eaglesoft.com.pk">Eaglesoft Developers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
