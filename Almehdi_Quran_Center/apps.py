@@ -1,3 +1,4 @@
+import joblib
 from django.apps import AppConfig
 
 
