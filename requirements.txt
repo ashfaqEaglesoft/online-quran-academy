@@ -7,7 +7,6 @@ astroid==2.8.2
 async-generator==1.10
 attrs==21.2.0
 auto-py-to-exe==2.10.1
-autopep8==1.6.0
 backports.entry-points-selectable==1.1.0
 beautifulsoup4==4.10.0
 black==21.7b0
