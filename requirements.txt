@@ -109,7 +109,6 @@ pyparsing==3.0.4
 pyPdf==1.13
 PyPDF2==1.26.0
 pyperclip==1.8.2
-pypiwin32==223
 PyRect==0.1.4
 PyScreeze==0.1.28
 python-dateutil==2.8.2
